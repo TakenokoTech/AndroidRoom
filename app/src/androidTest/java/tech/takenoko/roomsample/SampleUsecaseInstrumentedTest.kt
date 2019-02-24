@@ -37,9 +37,9 @@ class SampleUsecaseInstrumentedTest {
     @Test
     fun useAppContext() {
         val livedata = MutableLiveData<String>()
-        Mockito.`when`(SampleRepository.getName()).thenReturn(livedata)
+//        Mockito.`when`(SampleRepository.getName()).thenReturn(livedata)
         val getName = sampleUsecase.getName()
 
-        Assert.assertEquals(getName.value, "")
+        Assert.assertEquals(getName.value, null)
     }
 }
